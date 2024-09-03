@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/directdebit",
+    path: "/directdebit/",
     element: <Layout />,
     children: [
       {
