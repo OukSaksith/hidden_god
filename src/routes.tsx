@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {index: true, element: <Error />},
-            {path: "/:transactionId", element: <Transaction />},
+            {path: ":id", element: <Transaction />},
         ],
       }
     ],
