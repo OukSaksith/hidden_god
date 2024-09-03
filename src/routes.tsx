@@ -15,6 +15,7 @@ const router = createBrowserRouter([
         children: [
             {index: true, element: <Error />},
             {path: ":id", element: <Transaction />},
+            {path: "testing", element: <DirectDebit />},
         ],
       }
     ],
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {index: true, element: <Error />},
-            {path: ":subscriptionId", element: <DirectDebit />}
+            {path: ":subscriptionId", element: <DirectDebit />},
+            {path: "testing", element: <Transaction />},
         ],
       }
     ],
