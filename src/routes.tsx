@@ -5,16 +5,43 @@ import Error from "./pages/Error";
 import Transaction from "./pages/Transaction";
 
 
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Layout />,
+//     children: [
+//       {
+//         children: [
+//             {path: ":id", element: <Transaction />}
+//         ],
+//       }
+//     ],
+//   },
+//   {
+//     path: "/directdebit",
+//     element: <Layout />,
+//     children: [
+//       {
+//         children: [
+//             {path: ":subscriptionId", element: <DirectDebit />}
+//         ],
+//       }
+//     ],
+//   },
+
+//   {
+//     path: '*',
+//     element: <Error />,
+//   }
+// ]);
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
       {
-        children: [
-            {path: ":id", element: <Transaction />}
-        ],
-      }
+       path: ":id", element: <Transaction />}
     ],
   },
   {
@@ -22,9 +49,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        children: [
-            {path: ":subscriptionId", element: <DirectDebit />}
-        ],
+       path: ":subscriptionId", element: <DirectDebit />
       }
     ],
   },
@@ -34,5 +59,6 @@ const router = createBrowserRouter([
     element: <Error />,
   }
 ]);
+
 
 export default router;
