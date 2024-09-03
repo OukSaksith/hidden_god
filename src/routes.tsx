@@ -11,29 +11,28 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        errorElement: <Error />,
         children: [
-            {index: true, element: <Error />},
-            {path: ":id", element: <Transaction />},
-            {path: "testing", element: <DirectDebit />},
+            {path: ":id", element: <Transaction />}
         ],
       }
     ],
   },
   {
-    path: "/directdebit/",
+    path: "/directdebit",
     element: <Layout />,
     children: [
       {
-        errorElement: <Error />,
         children: [
-            {index: true, element: <Error />},
-            {path: ":subscriptionId", element: <DirectDebit />},
-            {path: "testing", element: <Transaction />},
+            {path: ":subscriptionId", element: <DirectDebit />}
         ],
       }
     ],
   },
+
+  {
+    path: '*',
+    element: <Error />,
+  }
 ]);
 
 export default router;
